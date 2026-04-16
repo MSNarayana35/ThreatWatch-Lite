@@ -1,0 +1,11 @@
+Dummy PCAP header...
+Packet 1: IP 192.168.1.5 > 192.168.1.10 : SYN
+Packet 2: IP 192.168.1.10 > 192.168.1.5 : SYN-ACK
+Packet 3: IP 192.168.1.5 > 192.168.1.10 : ACK
+Packet 4: IP 192.168.1.5 > 192.168.1.10 : HTTP GET /secret_flag.txt
+Packet 5: IP 192.168.1.10 > 192.168.1.5 : HTTP 200 OK
+Content-Type: text/plain
+
+Flag: CTF{PCAP_ANALYSIS}
+
+Packet 6: IP 192.168.1.5 > 192.168.1.10 : FIN

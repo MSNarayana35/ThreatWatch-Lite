@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - ThreatWatch Lite</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>ThreatWatch Lite</h1>
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-shell single">
+            <section class="auth-forms">
+                <div class="auth-card">
+                    <h3>Admin Login</h3>
+                    <form id="admin-login-form">
+                        <div class="field-group">
+                            <label for="admin-email">Admin Email</label>
+                            <input type="email" id="admin-email" placeholder="admin@threatwatch.com" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="admin-password">Password</label>
+                            <input type="password" id="admin-password" placeholder="Admin password" required>
+                        </div>
+                        <button type="submit" class="btn full-width">Login as Admin</button>
+                        <p class="auth-meta">
+                            Back to user login?
+                            <a href="/login.html">User Login</a>
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ThreatWatch Lite</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

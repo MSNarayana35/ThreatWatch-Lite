@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenges - ThreatWatch Lite</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Dashboard</a></li>
+                <li><a href="/ctf.html">CTF</a></li>
+                <li><a href="/learn.html">Learn</a></li>
+                <li><a href="/logout" id="logout-link" class="hidden">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Capture The Flag (CTF) Challenges</h1>
+        <p>Test your skills with real-world cybersecurity challenges. Select a CTF to begin.</p>
+        
+        <div class="filters">
+            <label for="difficulty-filter">Difficulty:</label>
+            <select id="difficulty-filter">
+                <option value="">All</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button class="btn" id="ctf-report-open">Report an issue</button>
+        </div>
+
+        <section id="ctf-list" class="grid-container">
+            <!-- CTF challenges will be dynamically loaded here -->
+        </section>
+
+        <section id="ctf-leaderboard">
+            <h2>Leaderboard</h2>
+            <div id="leaderboard-meta"></div>
+            <div id="leaderboard-content"></div>
+        </section>
+
+        <div id="ctf-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" id="ctf-modal-close">&times;</span>
+                <h2 id="ctf-modal-title"></h2>
+                <p id="ctf-modal-description"></p>
+                <p><strong>Points:</strong> <span id="ctf-modal-points"></span> <span id="ctf-modal-difficulty" class="pill"></span></p>
+                <div id="ctf-modal-resources"></div>
+                <div id="ctf-modal-hint"></div>
+                <div id="ctf-modal-actions">
+                    <button class="btn" id="ctf-modal-start">Start Challenge</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="ctf-report-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" id="ctf-report-close">&times;</span>
+                <h2>Report an Issue</h2>
+                <p>Use this form to report problems with specific challenges or the CTF page.</p>
+                <div>
+                    <label for="ctf-report-type"><strong>Type:</strong></label>
+                    <select id="ctf-report-type">
+                        <option value="challenge">Challenge issue</option>
+                        <option value="page">CTF page issue</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ctf-report-challenge"><strong>Challenge (optional):</strong></label>
+                    <select id="ctf-report-challenge">
+                        <option value="">General / Entire CTF Page</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ctf-report-description"><strong>Description:</strong></label>
+                    <textarea id="ctf-report-description" rows="4" style="width: 100%;"></textarea>
+                </div>
+                <div style="margin-top: 12px;">
+                    <button class="btn" id="ctf-report-submit">Submit Report</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ThreatWatch Lite. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/ctf.js"></script>
+</body>
+</html>

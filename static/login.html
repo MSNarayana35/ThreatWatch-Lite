@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ThreatWatch Lite</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>ThreatWatch Lite</h1>
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-shell">
+            <section class="auth-info">
+                <h2>Secure threat intelligence, simplified.</h2>
+                <p class="auth-tagline">
+                    Sign in to explore live incidents, solve CTF challenges, and manage reports
+                    in a single lightweight console.
+                </p>
+                <ul class="auth-highlights">
+                    <li>Real-time cyber incident feed</li>
+                    <li>Hands-on CTF practice challenges</li>
+                    <li>Collaborative incident contributions</li>
+                </ul>
+            </section>
+
+            <section class="auth-forms">
+                <div class="auth-card">
+                    <h3>User Login</h3>
+                    <form id="login-form">
+                        <div class="field-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn full-width">Login</button>
+                        <p class="auth-meta">
+                            New to ThreatWatch Lite?
+                            <a href="/signup.html">Create an account</a>
+                        </p>
+                    </form>
+                </div>
+
+                <div class="auth-card">
+                    <h3>Admin Login</h3>
+                    <form id="admin-login-form">
+                        <div class="field-group">
+                            <label for="admin-email">Admin Email</label>
+                            <input type="email" id="admin-email" placeholder="admin@threatwatch.com" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="admin-password">Password</label>
+                            <input type="password" id="admin-password" placeholder="Admin password" required>
+                        </div>
+                        <button type="submit" class="btn full-width">Login as Admin</button>
+                        <p class="auth-meta">
+                            Admins can review reports and approve user-submitted incidents.
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ThreatWatch Lite</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

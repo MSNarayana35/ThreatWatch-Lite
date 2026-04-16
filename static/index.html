@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreatWatch - Lite</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>ThreatWatch - Lite</h1>
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="learn.html">Learn</a>
+            <a href="ctf.html">CTF</a>
+            <a href="admin.html" id="admin-link" class="hidden">Admin</a>
+            <a href="login.html" id="login-link">Login</a>
+            <a href="signup.html" id="signup-link">Sign Up</a>
+            <a href="/logout" id="logout-link" class="hidden">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h2>Threat Dashboard</h2>
+            <div class="filters">
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="Ransomware">Ransomware</option>
+                    <option value="Phishing">Phishing</option>
+                    <option value="Malware">Malware</option>
+                    <option value="Data Breach">Data Breach</option>
+                    <option value="Zero-Day">Zero-Day</option>
+                    <option value="Cyber Attack">Cyber Attack</option>
+                    <option value="General">General</option>
+                </select>
+                <select id="severity-filter">
+                    <option value="">All Severities</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <input type="date" id="start-date-filter">
+                <input type="date" id="end-date-filter">
+                <button id="filter-btn">Filter</button>
+                <button id="clear-filter-btn">Clear</button>
+                <button id="contribute-btn">Contribute Incident</button>
+            </div>
+            <div id="dashboard-content"></div>
+        </section>
+
+        <div id="contribute-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" id="contribute-close">&times;</span>
+                <h2>Contribute Incident</h2>
+                <p>Share information about a cyber attack or security incident.</p>
+                <div>
+                    <label for="contrib-title"><strong>Title</strong></label>
+                    <input type="text" id="contrib-title">
+                </div>
+                <div>
+                    <label for="contrib-category"><strong>Category</strong></label>
+                    <input type="text" id="contrib-category" placeholder="e.g. Ransomware, Phishing">
+                </div>
+                <div>
+                    <label for="contrib-severity"><strong>Severity</strong></label>
+                    <select id="contrib-severity">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="contrib-description"><strong>Description</strong></label>
+                    <textarea id="contrib-description" rows="4" style="width: 100%;"></textarea>
+                </div>
+                <div>
+                    <label for="contrib-resources"><strong>Resources (optional)</strong></label>
+                    <input type="text" id="contrib-resources" placeholder="Comma-separated links">
+                </div>
+                <div style="margin-top: 12px;">
+                    <button id="contrib-submit">Submit</button>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ThreatWatch Lite</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

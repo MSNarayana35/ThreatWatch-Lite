@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+SQLAlchemy
+pydantic
+requests
+beautifulsoup4
+python-dotenv
+python-jose[cryptography]
+passlib[bcrypt]
