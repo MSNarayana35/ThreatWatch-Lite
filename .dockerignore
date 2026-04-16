@@ -1,0 +1,6 @@
+__pycache__
+*.pyc
+.env
+.git
+threatwatch.db
+sql_app.db
